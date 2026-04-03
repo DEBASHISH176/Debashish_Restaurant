@@ -1,0 +1,768 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #ffffff;
+  color: #555;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/hero-image.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  margin: 0;
+  /* padding: 0; */
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  font-weight: 300;
+}
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-weight: 300;
+  border-radius: 200px;
+  transition:
+    background-color 0,
+    2s,
+    border 0.2s,
+    color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #e67e22;
+  color: white;
+  border: 1px solid orange;
+  margin-right: 25px;
+}
+
+.btn-ghost:visited,
+.btn-ghost:link {
+  border: 1px solid orange;
+  color: orange;
+}
+
+.btn:hover,
+.btn:active,
+input[type="submit"] {
+  background-color: orange;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid orange;
+  color: white;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type="submit"] {
+  border: 1px solid orange;
+}
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+  margin-left: auto;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  padding: 8px 0;
+  transition: border-bottom 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid orange;
+}
+
+/* @media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stacks them vertically on small screens */
+/* }
+} */
+
+/* START */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Also, add some styling for the icons to make them look like the mockup */
+ion-icon {
+  display: block;
+  font-size: 200%;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.section-features {
+  padding: 80px 0;
+}
+
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%; /* Centers the text */
+  text-align: center;
+  margin-bottom: 30px;
+  color: #b86110;
+}
+/* food bold section */
+.heading {
+  color: rgb(255, 115, 0);
+  font-weight: bold;
+}
+/* END */
+
+/* section {
+  padding: 0;
+}
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box {
+  padding: 1%;
+}
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 110%;
+  margin-bottom: 15%;
+} */
+
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+}
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  transition:
+    transform 0.5s,
+    opacity 0.5s;
+}
+
+.meal-photo img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  opacity: 0.7;
+}
+.meal-photo img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.section-meals {
+  padding: 0;
+}
+
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+.works-step {
+  margin-bottom: 50%;
+  margin-right: 25px;
+}
+/* start */
+/* Target the specific row containing your 4 feature boxes */
+.section-features .row:last-of-type {
+  display: grid;
+  /* This creates 4 columns of equal width */
+  grid-template-columns: repeat(4, 1fr);
+  /* This adds spacing between your columns */
+  gap: 30px;
+}
+
+/* Override any leftover styles from the old grid system */
+.section-features .col {
+  width: 100%;
+  float: none;
+  margin: 0;
+}
+/* END */
+
+/* .steps-box:first-child {
+  text-align: center;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 30%;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.works-step div {
+  color: orange;
+  border: 4px solid orange;
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 5px;
+  margin-right: 25px;
+  float: left;
+  font-size: 150%;
+}
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+.section-steps {
+  background-color: #f4f4f4;
+} */
+
+/* Start */
+/* --- SECTION STEPS --- */
+
+.section-steps {
+  background-color: #f4f4f4;
+  padding: 80px 0;
+}
+
+/* This forces the phone and the text-box to be side-by-side */
+.section-steps .row:last-of-type {
+  display: flex;
+  align-items: center;
+}
+
+.steps-box {
+  flex: 1; /* Makes both columns equal width */
+}
+
+.steps-box:first-child {
+  text-align: center; /* Aligns the phone image to the center-right */
+  padding-right: 5%;
+  padding-right: 3%;
+  /* margin-top: 30px; */
+}
+
+.steps-box:last-child {
+  padding-left: 5%;
+  /* margin-top: 70px; Removed the 70px margin to keep it centered with the phone */
+  padding-left: 3%;
+}
+
+.app-screen {
+  width: 40%; /* Adjusted width to match the visual scale of the image */
+  box-shadow: 20px 20px 10px #aaaaaa; /* Softer, more modern shadow */
+  border-radius: 30px;
+}
+
+.works-step {
+  margin-bottom: 45px; /* Spacing between steps 1, 2, and 3 */
+  display: flex;
+  align-items: center;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 60px;
+}
+
+.works-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22; /* Thinner border to match the mockup */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+  flex-shrink: 0; /* Prevents the circle from squishing */
+}
+
+.works-step p {
+  line-height: 1.4;
+}
+
+/* App Download Buttons */
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+  text-decoration: none;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  /* margin-right: 15px; */
+  margin-right: 10px;
+}
+
+/* cities */
+/* .box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+} */
+
+/* .city-feature {
+  margin-bottom: 5px;
+} */
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: orange;
+  font-size: 120%;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 10px;
+}
+
+/* a:link,
+a:visited {
+  color: orange;
+  text-decoration: none;
+  border-bottom: 1px solid orange;
+  padding-bottom: 1px;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+  transition:
+    border-bottom 0.5s,
+    color o.5s;
+} */
+
+/* --- CITIES SECTION --- */
+
+.section-cities {
+  padding: 80px 0;
+}
+
+/* Use Grid to create the 4-column layout shown in the image */
+.section-cities .row:last-of-type {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 90%; /* Matches the smaller, elegant headings in the image */
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+  font-size: 70%; /* Smaller text for the stats */
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the icons (person, star, twitter/insta) */
+.icon-small {
+  color: #e67e22;
+  margin-right: 10px;
+  font-size: 120%;
+}
+
+/* Specific link styling for the city handles */
+.city-feature a:link,
+.city-feature a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  transition: all 0.2s;
+}
+
+.city-feature a:hover {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+/* --- TESTIMONIALS SECTION --- */
+
+.section-testimonials {
+  /* Dark overlay to make white text pop, exactly like the image */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(img/backfood.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+  padding: 80px 0;
+}
+
+/* Flexbox ensures the 3 columns stay aligned even with different text lengths */
+.section-testimonials .row:last-of-type {
+  display: flex;
+  gap: 40px;
+}
+
+.section-testimonials .col {
+  flex: 1;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+  font-weight: 300;
+}
+
+/* The large decorative quotation mark in the top-left */
+blockquote::before {
+  content: "\201c";
+  display: block;
+  font-size: 500%;
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  color: #555; /* Subtle dark grey as seen in the mockup */
+}
+
+cite {
+  font-size: 90%;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  font-style: normal;
+}
+
+cite img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  /* Keeps the image from stretching */
+  object-fit: cover;
+}
+
+/* Ensure the Section Heading is white in this section */
+.section-testimonials h2 {
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.section-testimonials h2:after {
+  background-color: #e67e22; /* Keeps the orange underline */
+}
+
+/* --- SECTION PLANS --- */
+
+.section-plans {
+  background-color: #f4f4f4;
+  padding: 80px 0;
+}
+
+/* Create the 3-column layout */
+.section-plans .row:last-of-type {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 30px;
+  width: 100%;
+  box-shadow: 0 2px 2px #efefef;
+}
+
+/* Header part of the plan box */
+.plan-box div:first-child {
+  padding: 0;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #fcfcfc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Content part (the list) */
+.plan-box div:nth-child(2) {
+  padding: 30px;
+}
+
+/* Button part */
+.plan-box div:last-child {
+  padding: 30px;
+  text-align: center;
+  border: none;
+}
+
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 8px 0;
+  font-size: 90%;
+  display: flex;
+  align-items: center;
+}
+
+/* Icon styling within the plans */
+.plan-box .icon-small {
+  font-size: 110%;
+  margin-right: 10px;
+  width: 10px;
+}
+
+/* Fix for the button styles to match the rounded pill look */
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 200px;
+  transition:
+    background-color 0.2s,
+    border 0.2s,
+    color 0.2s;
+}
+
+.premium {
+  color: gold;
+}
+.pro {
+  color: blue;
+}
+.starter {
+  color: gray;
+}
+
+.section-form {
+  background-color: #f4f4f4;
+  padding: 80px 0;
+}
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+textarea {
+  height: 100%;
+}
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+/* Footer section */
+
+footer {
+  background-color: #333;
+  font-size: 80%;
+  padding: 40px;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:hover {
+  color: #ddd;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 20px;
+}
+
+.fb:hover {
+  color: #3b5998;
+}
+
+.tw:hover {
+  color: #00aced;
+}
+.gl:hover {
+  color: #dd4b39;
+}
+.inst:hover {
+  color: purple;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}

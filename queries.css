@@ -1,0 +1,157 @@
+/* Big tablets 1200px
+@media only screen and(max-width:480px) {
+  .hero-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+  .row {
+    padding: 0 2%;
+  }
+} */
+
+/* Small tablets to big tablets from 768 to 1023px */
+/* @media only screen and (max-width: 1023px) {
+} */
+
+/* Small phones to small tablets from 481 to 767px */
+/* @media only screen and (max-width: 767px) {
+} */
+
+/* Small phones from 0 to 480px */
+/* @media only screen and (max-width: 480px) {
+} */
+
+/* --- 1. Extra-large Devices (1200px and above) --- */
+/* Your main style.css handles this, but we ensure the row is capped */
+@media only screen and (min-width: 1200px) {
+  .row {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+/* --- 2. Desktops/Large Screens (1024px - 1200px) --- */
+@media only screen and (max-width: 1200px) {
+  .row {
+    width: 100%;
+    padding: 0 2%;
+  }
+}
+
+/* --- 3. Laptops/Small Screens (768px - 1024px) --- */
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  /* Features & Cities: Reduce from 4 columns to 2 columns */
+  .section-features .row:last-of-type,
+  .section-cities .row:last-of-type {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .long-copy {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+}
+
+/* --- 4. Tablets/iPads (480px - 768px) --- */
+@media only screen and (max-width: 768px) {
+  header {
+    background-attachment: scroll;
+  } /* Better performance on mobile */
+
+  .hero-text-box {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  h1 {
+    font-size: 180%;
+  }
+
+  /* Steps Section: Stack phone and text vertically */
+  .section-steps .row:last-of-type {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .app-screen {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+
+  /* Testimonials: Stack vertically */
+  .section-testimonials .row:last-of-type {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Plans: Stack vertically */
+  .section-plans .row:last-of-type {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-box {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+/* --- 5. Mobile Devices (320px - 480px) --- */
+@media only screen and (max-width: 480px) {
+  /* Navigation: Stack links vertically */
+  .main-nav {
+    float: none;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .main-nav li {
+    display: block;
+    margin: 15px 0;
+    margin-left: 0;
+  }
+
+  .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Features & Cities: Single column */
+  .section-features .row:last-of-type,
+  .section-cities .row:last-of-type {
+    grid-template-columns: 1fr;
+  }
+
+  /* Meal Showcase: 2x4 grid instead of 1x8 */
+  .meals-showcase li {
+    width: 50%;
+  }
+
+  /* Forms: Labels on top of inputs */
+  .contact-form {
+    width: 100%;
+  }
+
+  .col.span_1_of_3,
+  .col.span_2_of_3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .plan-box {
+    width: 100%;
+  }
+
+  .btn:link,
+  .btn:visited {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
